@@ -3,7 +3,7 @@ import { View, Button, StyleSheet } from 'react-native';
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Button title="Санзу Харучё" onPress={() => {}} />
+      <Button title="Azema" onPress={() => {}} />
     </View>
   );
 }
