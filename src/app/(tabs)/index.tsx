@@ -24,18 +24,15 @@ export default function HomeScreen() {
           end={{ x: 1, y: 1 }}
           style={styles.gradientCard}
         >
-          {/* Верхняя картинка */}
           <Image
             source={require("../../../assets/images/puppy.png")}
             style={styles.headerImage}
           />
 
-          {/* Тексты из comps.tsx */}
           <Text style={styles.title}>{comps.title}</Text>
           <Text style={styles.subtitle}>{comps.subtitle}</Text>
           <Text style={styles.emoji}>{comps.emoji}</Text>
 
-          {/* Аватар */}
           <Image
             source={require("../../../assets/images/me.png")}
             style={styles.avatar}
@@ -46,7 +43,6 @@ export default function HomeScreen() {
 
           <Text style={styles.description}>{comps.description}</Text>
 
-          {/* Кнопка */}
           <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>{comps.buttonText}</Text>
           </TouchableOpacity>
