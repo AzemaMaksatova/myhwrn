@@ -44,12 +44,10 @@ export default function HomeScreen() {
 
           <Text style={styles.description}>{comps.description}</Text>
 
-          {/* Первая кнопка */}
           <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>{comps.buttonText}</Text>
           </TouchableOpacity>
 
-          {/* Новый счетчик + кнопка TAP! */}
           <Counter initial={0} />
         </LinearGradient>
       </View>
