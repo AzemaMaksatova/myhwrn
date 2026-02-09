@@ -9,11 +9,12 @@ import {
 } from "react-native";
 
 import { comps } from "@/components/comps";
+import { Counter } from "@/components";
 
 export default function HomeScreen() {
   return (
     <ImageBackground
-      source={require("../../../assets/images/background.png")}
+      source={require("@/assets/images/background.png")}
       style={styles.background}
       resizeMode="cover"
     >
@@ -25,7 +26,7 @@ export default function HomeScreen() {
           style={styles.gradientCard}
         >
           <Image
-            source={require("../../../assets/images/puppy.png")}
+            source={require("@/assets/images/puppy.png")}
             style={styles.headerImage}
           />
 
@@ -34,7 +35,7 @@ export default function HomeScreen() {
           <Text style={styles.emoji}>{comps.emoji}</Text>
 
           <Image
-            source={require("../../../assets/images/me.png")}
+            source={require("@/assets/images/me.png")}
             style={styles.avatar}
           />
 
@@ -43,9 +44,13 @@ export default function HomeScreen() {
 
           <Text style={styles.description}>{comps.description}</Text>
 
+          {/* Первая кнопка */}
           <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>{comps.buttonText}</Text>
           </TouchableOpacity>
+
+          {/* Новый счетчик + кнопка TAP! */}
+          <Counter initial={0} />
         </LinearGradient>
       </View>
     </ImageBackground>
@@ -139,6 +144,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 20,
     alignItems: "center",
+    marginBottom: 12,
   },
 
   buttonText: {
