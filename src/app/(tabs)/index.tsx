@@ -8,10 +8,12 @@ import {
   View,
 } from "react-native";
 
+import { comps } from "@/components/comps";
+
 export default function HomeScreen() {
   return (
     <ImageBackground
-      source={require("../../assets/images/background.png")}
+      source={require("../../../assets/images/background.png")}
       style={styles.background}
       resizeMode="cover"
     >
@@ -22,30 +24,31 @@ export default function HomeScreen() {
           end={{ x: 1, y: 1 }}
           style={styles.gradientCard}
         >
+          {/* Верхняя картинка */}
           <Image
-            source={require("../../assets/images/puppy.png")}
+            source={require("../../../assets/images/puppy.png")}
             style={styles.headerImage}
           />
 
-          <Text style={styles.title}>Welcome</Text>
-          <Text style={styles.subtitle}>Azema</Text>
-          <Text style={styles.emoji}>✌️</Text>
+          {/* Тексты из comps.tsx */}
+          <Text style={styles.title}>{comps.title}</Text>
+          <Text style={styles.subtitle}>{comps.subtitle}</Text>
+          <Text style={styles.emoji}>{comps.emoji}</Text>
 
+          {/* Аватар */}
           <Image
-            source={require("../../assets/images/me.png")}
+            source={require("../../../assets/images/me.png")}
             style={styles.avatar}
           />
 
-          <Text style={styles.name}>Azema</Text>
-          <Text style={styles.role}>Mobile Developer</Text>
+          <Text style={styles.name}>{comps.name}</Text>
+          <Text style={styles.role}>{comps.role}</Text>
 
-          <Text style={styles.description}>
-            Passionate about building beautiful mobile experiences with React
-            Native and Expo.
-          </Text>
+          <Text style={styles.description}>{comps.description}</Text>
 
+          {/* Кнопка */}
           <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>COME HERE!</Text>
+            <Text style={styles.buttonText}>{comps.buttonText}</Text>
           </TouchableOpacity>
         </LinearGradient>
       </View>
@@ -72,7 +75,7 @@ const styles = StyleSheet.create({
     borderRadius: 22,
     paddingBottom: 24,
     alignItems: "center",
-    overflow: "hidden", 
+    overflow: "hidden",
   },
 
   headerImage: {
