@@ -8,8 +8,8 @@ import {
   View,
 } from "react-native";
 
-import { comps } from "@/components/comps";
 import { Counter } from "@/components";
+import { comps } from "@/components/comps";
 
 export default function HomeScreen() {
   return (
